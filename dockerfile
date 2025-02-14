@@ -1,4 +1,4 @@
-FROM python:12.0.0 
+FROM python:3.12-slim
 
 WORKDIR /app
 
@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD [ "python","app.py" ]
+CMD [ "python","discordbot.py" ]
