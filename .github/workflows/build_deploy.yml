@@ -46,7 +46,7 @@ jobs:
           EXTRA_IMAGE_TAGS="${VERSION};latest"
 
           # Build and push the image to ECR with the main image tag
-          docker build --pull -f ${{ env.IMAGE_BASE_PATH }}/Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ${{ env.IMAGE_BASE_PATH }}
+          docker build --pull -f ${{ env.IMAGE_BASE_PATH }}/DockerFile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ${{ env.IMAGE_BASE_PATH }}
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
           # Build and PUSH additional tags
