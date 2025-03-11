@@ -38,6 +38,7 @@ jobs:
         
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: allora-discord-bot
+          IMAGE_BASE_PATH: .
           VERSION: ${{ env.VERSION }}
 
         run: |
